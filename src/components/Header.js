@@ -3,6 +3,7 @@ import { BiBook } from 'react-icons/bi';
 import { BsChevronDown, BsToggleOn} from 'react-icons/bs';
 import { HiOutlineMoon} from 'react-icons/hi';
 import './header.css'
+import Search from './Search';
 
 const Header = () => {
   return (
@@ -16,6 +17,7 @@ const Header = () => {
         <li><span><HiOutlineMoon/></span></li>
       </ul>
       </div>
+      <Search/>
     </div>
   )
 }

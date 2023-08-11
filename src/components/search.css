@@ -1,0 +1,29 @@
+.search-input{
+  width: 50vw;
+}
+
+.search-form {
+  position: relative;
+  display: inline-block;
+}
+
+.search-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding-right: 40px;
+  background-color: #f7f6f6;
+  font-weight: bolder;
+}
+
+.search-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: blueviolet;
+  font-size: 16px;
+}
