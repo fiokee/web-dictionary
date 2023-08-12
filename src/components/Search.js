@@ -15,6 +15,7 @@ const Search = () => {
       e.preventDefault();
       Axios.get(`https://api.dictionaryapi.dev/api/v2/entries/en_US/${searchWord}`
       ).then((response)=>{
+        setData(response.data[0])
         console.log(response.data[0]);
 
       }).catch((error) => {
@@ -30,47 +31,79 @@ const Search = () => {
              aria-label="Search through site content" required onChange={(e)=> setWordSearch(e.target.value)}/>
                 <button onClick={getWord} type='submit' className='search-button'><AiOutlineSearch/></button>
         </form>
+    {
+      data && (
 
-        <div className='words'>
-          <h1>Keyboard</h1>
-          <span><BsFillPlayFill/></span>
-        </div>
+            <div className='words'>
+              <h1>{data.word}</h1>
+              <span><BsFillPlayFill/></span>
+            </div>
+      )
+    }
+
+    {
+      data && (
+        <div>
           <div className='phonetics'>
-          <p>/Phonetics/</p>
+          <p>{data.phonetic}</p>
           </div>
           <div className='noun'>
-           <p>noun</p>
+           <p>{data. meanings[0].partOfSpeech}</p>
            <hr/>
         </div>
+        </div>
+      )
+    }
+
+    {data && (
+
         <div>
           <p className='meaning'>Meaning</p>
           <ul>
-            <li>dskfskjfsfksakfsakfkafksafdjsfkjsajfkdsakjfkjsfjk</li>
-            <li>dskfskjfsfksakfsakfkafksafdjsfkjsajfkdsakjfkjsfjk</li>
-            <li>dskfskjfsfksakfsakfkafksafdjsfkjsajfkdsakjfkjsfjk</li>
+            <li>{data.meanings[0].definitions[0].definition}</li>
+            <li>{data.meanings[0].definitions[1].definition}</li>
+            <li>{data.meanings[0].definitions[2].definition}</li>
           </ul>
         </div>
+    )}
 
-        <div className='synonyms'>
-          <span>synonyms</span>
-          <p>electronic Keyboard</p>
-        </div>
-        <div className='noun'>
-           <p>verb</p>
-           <hr/>
-        </div>
+  {
+    data && (
+
+          <div className='synonyms'>
+            <span>synonyms</span>
+            <p>{data.meanings[0].synonyms[0]}</p>
+          </div>
+    )
+  }
+
+    {
+      data && (
         <div>
-        <p className='meaning'>Meaning</p>
-          <ul>
-            <li>dskfskjfsfksakfsakfkafksafdjsfkjsajfkdsakjfkjsfjk</li>
-            <p className='last-meaning'>"hgghdhdhhdhdhdhhd"</p>
-            </ul>
-        </div>
+          <div className='noun'>
+            <p>{data. meanings[1].partOfSpeech}</p>
+            <hr/>
+          </div>
+          <div>
+          <p className='meaning'>Meaning</p>
+            <ul>
+              <li>{data.meanings[1].definitions[0].definition}</li>
+              <p className='last-meaning'>"{data.meanings[0].definitions[1].definition}"</p>
+              </ul>
+          </div>
+          </div>
+      )
+    }
         <hr className='horizontal'/>
+
+{data && (
+
         <div className='source'>
         <span>Source</span>
-        <p>https://rest-country-app.web.app <TbExternalLink/></p>
+        <a href=''>{data.sourceUrls} <TbExternalLink/></a>
         </div>
+)}
+
     </div>
   )
 }

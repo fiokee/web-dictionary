@@ -93,7 +93,9 @@
   color: gray;
 }
 
-.source p{
+.source a{
   margin-left: 18px;
   font-weight: 700;
+  cursor: pointer;
+  color: #000;
 }
