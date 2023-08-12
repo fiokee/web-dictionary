@@ -1,3 +1,9 @@
+.box{
+  margin: auto;
+  width: 60%;
+  
+}
+
 .search-input{
   width: 50vw;
 }
@@ -9,11 +15,12 @@
 
 .search-input {
   padding: 10px;
-  border: 1px solid #ccc;
+  border: none;
   border-radius: 10px;
   padding-right: 40px;
   background-color: #f7f6f6;
   font-weight: bolder;
+  
 }
 
 .search-button {
@@ -26,4 +33,67 @@
   cursor: pointer;
   color: blueviolet;
   font-size: 16px;
+}
+
+.words{
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+  margin-top: 23px;
+}
+.words span{
+  font-size: 30px;
+  color: rgb(170, 108, 228);
+  background-color: rgb(225, 203, 247);
+  border-radius: 30px;
+  width: 55px;
+  text-align: center;
+  cursor: pointer;
+}
+.phonetics{
+  color: blueviolet;
+}
+.noun{
+  display: flex;
+}
+.noun p{
+  font-weight: bold;
+}
+.noun hr{
+  width: 45vw;
+  margin-left: 18px;
+  color: gray;
+}
+.horizontal{
+  width: 49vw;
+  color: gray;
+}
+.synonyms{
+  display: flex;
+}
+.synonyms span{
+  color: gray;
+}
+.synonyms p{
+  margin-left: 18px;
+  color: blueviolet;
+  font-weight: 700;
+}
+.meaning{
+  color: gray;
+}
+.last-meaning{
+  color: gray;
+}
+
+.source{
+  display: flex;
+}
+.source span{
+  color: gray;
+}
+
+.source p{
+  margin-left: 18px;
+  font-weight: 700;
 }
