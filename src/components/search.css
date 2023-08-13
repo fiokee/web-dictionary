@@ -41,6 +41,9 @@
   width: 85%;
   margin-top: 23px;
 }
+.words h1{
+  text-transform: capitalize;
+}
 .words span{
   font-size: 30px;
   color: rgb(170, 108, 228);

@@ -21,6 +21,28 @@ const Search = () => {
         });
     }
 
+    //The audio of the searched word
+        const playWord = ()=>{
+            //condition to check if the audio exist in the data
+            let audio = null;
+            if(data && data.phonetics){
+
+                if(data.phonetics[0].audio){
+                audio = new Audio(data.phonetics[0].audio);
+                }
+                
+                else if(data.phonetics.length > 1 && data.phonetics[1].audio){
+                    audio = new Audio(data.phonetics[1].audio)
+                } 
+                else if(data.phonetics.length > 2 && data.phonetics[2].audio){
+                    audio = new Audio(data.phonetics[2].audio);
+                }
+
+                audio.play();
+            }
+        }
+
+
     return (
         <div className='box'>
             <form className="search-form" role="search" onSubmit={getWord}>
@@ -39,7 +61,7 @@ const Search = () => {
             {data && (
                 <div className='words'>
                     <h1>{data.word}</h1>
-                    <span><BsFillPlayFill /></span>
+                    <span onClick={playWord}><BsFillPlayFill /></span>
                 </div>
             )}
 
