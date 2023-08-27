@@ -10,7 +10,7 @@
   /* --link_color: cyan; */
 }
 *{
-  transition: 0.3s ease-in-out;
+  transition:  all 0.3s ease-in-out;
 }
 body {
   margin: 0;
