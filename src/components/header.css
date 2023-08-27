@@ -1,7 +1,14 @@
+@font-face {
+    font-family: 'Serif';
+    src: url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,600&family=Kumbh+Sans&family=Montserrat+Alternates:wght@200&family=PT+Serif&family=Xanh+Mono:ital@1&display=swap') format('Serif'),
+         
+  }
+
 .container{
     width: 60%;
     overflow: auto;
-    color: gray;
+    color: var(--body_color);
+    background-color: var( --body_background);
     margin-top: 12px;
 }
 .container h1{

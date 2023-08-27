@@ -16,7 +16,7 @@ const Search = () => {
             setData(response.data[0]);
             console.log(response.data[0]);
         }).catch((error) => {
-            alert("Please Enter Word:", error);
+            alert("Word not found:", error);
             console.error("API request error:", error);
         });
     }
