@@ -5,6 +5,7 @@ import { HiOutlineMoon} from 'react-icons/hi';
 import './header.css'
 import Search from './Search';
 import FontSelector from './FontSelector';
+import DarkMode from './DarkMode';
 
 const Header = () => {
   const [selectFont, setSelectFont] = useState('Serif');
@@ -27,8 +28,7 @@ const Header = () => {
         <span className='book'><BiBook/></span>
       <ul className='navbar'>
         <li><FontSelector onSelectFont={handleFontChange}/></li>
-        <li><span><BsToggleOn/></span></li>
-        <li><span><HiOutlineMoon/></span></li>
+        <DarkMode/>
       </ul>
       </div>
     </div>

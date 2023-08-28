@@ -1,0 +1,5 @@
+.App{
+     color: var(--body_color);
+    background-color: var( --body_background);
+    overflow: hidden;
+}

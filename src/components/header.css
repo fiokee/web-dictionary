@@ -7,8 +7,8 @@
 .container{
     width: 60%;
     overflow: auto;
-    color: var(--body_color);
-    background-color: var( --body_background);
+    /* color: var(--body_color);
+    background-color: var( --body_background); */
     margin-top: 12px;
 }
 .container h1{
