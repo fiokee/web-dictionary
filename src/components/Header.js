@@ -9,17 +9,12 @@ import DarkMode from './DarkMode';
 
 const Header = () => {
   const [selectFont, setSelectFont] = useState('Serif');
-  const [isDarkMode, setIsDarkMode] = useState(false);
-
+ 
   const handleFontChange = (newFont) =>{
     setSelectFont(newFont)
   }
-
-  //dark mode
   
-  const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
-  };
+ 
   return (
     <Fragment>
     <div className='container'>

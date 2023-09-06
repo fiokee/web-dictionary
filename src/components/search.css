@@ -102,3 +102,15 @@
   cursor: pointer;
   color: #000;
 }
+
+
+@media screen and (max-width: 500px) {
+  .search-input{
+    width: 70vw;
+  }
+  .box{
+    width: 90%;
+    margin: 12px;
+    padding: 12px;
+  }
+}

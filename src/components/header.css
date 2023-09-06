@@ -7,8 +7,6 @@
 .container{
     width: 60%;
     overflow: auto;
-    /* color: var(--body_color);
-    background-color: var( --body_background); */
     margin-top: 12px;
 }
 .container h1{
@@ -34,4 +32,10 @@
   .navbar span{
     float: right;
     margin-right: 50px;
+  }
+
+  @media screen and (max-width: 450px) {
+   .container{
+    width: 100%;
+   }
   }
